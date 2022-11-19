@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p6-gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --blue: #29505B;
+            --brown: #BD6E2C;
+            --blue-bg: white;
+            --brown-bg: white;
+            --black: black;
+            --autor: 'Poppins', sans-serif;
+            --título: 'Bebas Neue', cursive;
+            --descripcion: 'Poppins', sans-serif;
+        }
+        body{
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 2px;
+        }
+        h1{
+            font-family: var(--autor);
+            color: var(--blue);
+            font-size: 0.7em;
+            padding-top: 8px;
+        }
+        h2{
+            font-family: var(--título);
+            color: var(--brown);
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        p{
+            font-family: var(--descripcion);
+            color: var(--black);
+            font-size: 0.6em;
+            font-weight: 400;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2em;
+            gap: 1em;
+        }
+        .card{
+            transition: flex-grow 1s;
+            flex-basis: 23%;
+            flex-shrink: 0.5;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            background: papayawhip;
+            border-radius: 10px;
+        }
+        .card:nth-child(1){
+            flex-grow: 1;
+        }
+        .card:nth-child(1) .card_img img{
+            height: 200px;
+        }
+        .card:nth-child(1) .card_txt{
+            padding-top: 1.5em;
+        }
+        .card:nth-child(3) .card_img img{
+            object-fit: cover;
+            object-position: top;
+        }
+        .card:nth-child(5){
+            flex-grow: 1;
+        }
+        .card:nth-child(5) .card_img img{
+            height: 200px;
+        }
+        .card:nth-child(5) .card_txt{
+            padding-top: 1.5em;
+        }
+        .card_img{
+            width: 100%;
+            height: 175px;
+        }
+        .card_img img{
+            object-fit: cover;
+            height: 100%;
+        }
+        .card:hover{
+            flex-grow: 1;
+            transition: flex-grow 0.5s;
+            box-shadow: 0em 0em 0.3em var(--blue);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="gallery">
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/christina's world.jpg" alt="Una pintura de una mujer en el campo.">
+                </figure>
+                <header class="card_txt">
+                    <h1>ANDREW WYETH</h1>
+                    <h2>Christina's World</h2>
+                    <p>La mujer sin rostro que yacía en el suelo era Anna Christina Olson, la vecina y musa del artista Andrew Wyeth. La pintura no es romántica; sufría de un trastorno de atrofia muscular, posiblemente la enfermedad de Charcot-Marie-Tooth, y se sabía que se arrastraba por la granja familiar.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/american gothic.jpg" alt="Una pintura de dos personas de mediana edad.">
+                </figure>
+                <header class="card_txt">
+                    <h1>GRANT WOOD</h1>
+                    <h2>American Gothic</h2>
+                    <p>Esta pintura representa lo que parece ser un granjero de la época de la Gran Depresión y su curtida esposa. El hombre que sostenía la horquilla era el dentista de Wood, Byron McKeeby, flanqueado por la hermana del artista, Nan Wood Graham.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/cyclops.jpg" alt="Una pintura de un cíclope.">
+                </figure>
+                <header class="card_txt">
+                    <h1>ODILON REDON</h1>
+                    <h2>Cyclops</h2>
+                    <p>Polifemo, el gigante que luce el globo ocular solitario, mira por encima de un afloramiento rocoso al objeto de su deseo: la ninfa Galatea. Derivado de la "Odisea" de Homero, el cuento era un tropo popular entre los simbolistas franceses, incluido el poeta y pintor contemporáneo de Redon, Gustave Moreau.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/girl with a pearl earring.jpg" alt="Una pintura de una mujer hermosa con un pendiente de perla.">
+                </figure>
+                <header class="card_txt">
+                    <h1>JOHANNES VERMEER</h1>
+                    <h2>Girl with a Pearl Earring</h2>
+                    <p>Se ha sugerido que la niña era la hija o amante de Vermeer. Si bien este puede ser el caso, la imagen no pretendía representar a una persona real. El turbante que usa el modelo indica que la pieza fue concebida como un "tronie", una imagen idealizada envuelta en ropa exótica.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/Le Déjeuner sur l'herbe.jpg" alt="Un cuadro con gente haciendo un picnic.">
+                </figure>
+                <header class="card_txt">
+                    <h1>EDOUARD MANET</h1>
+                    <h2>Le Déjeuner sur l'herbe</h2>
+                    <p>Muchos asumieron que Victorine-Louise Meurent, la mujer desnuda que miraba al espectador sin disculparse, era una prostituta local; en realidad, era una codiciada modelo de artista parisino y una consumada pintora por derecho propio.</p>
+                </header>
+            </div>
+            <div class="card">
+                <figure class="card_img">
+                    <img src="img/guernica.jpg" alt="">
+                </figure>
+                <header class="card_txt">
+                    <h1>PABLO PICASSO</h1>
+                    <h2>Guernica</h2>
+                    <p>Una enorme masa cambiante de figuras distorsionadas y agonizantes, el "Guernica" de Pablo Picasso fue la respuesta personal del artista al horrible bombardeo infligido por los alemanes en la pequeña ciudad vasca en 1937.</p>
+                </header>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
